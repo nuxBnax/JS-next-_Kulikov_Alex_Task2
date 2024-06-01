@@ -34,7 +34,7 @@
         // ----------------------Задание 2--------------------
         const btnEl = document.querySelector('.btn');
         if (btnEl.classList.contains('btn-secondary')) {
-            btnEl.classList.remove('btn-secondary');    
+            btnEl.classList.remove('btn-secondary');
         } else {
             btnEl.classList.add('btn-secondary');
         }
@@ -47,10 +47,34 @@
 
         // 4. Используя метод insertAdjacentHTML добавьте после div'a с классом "dropdown" следующую разметку:
         //     `<a href="#">link</a>`
-        
+        // ----------------------Задание 4--------------------
+
+        const divEl = document.querySelector('div');
+        if (divEl.classList.contains('dropdown')) {
+            divEl.insertAdjacentHTML("afterend", '<a href="#">link</a>');
+            alert('div с классом dropdown НАЙДЕН. Якорь будет добавлен сразу после этого блока');
+        } else {
+            alert('Такого div с классом dropdown НЕТ!');
+        }
+
         // 5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
+        // ----------------------Задание 5--------------------
+
+        const menubtnEl = document.querySelector('#dropdownMenuButton');
+        menubtnEl.setAttribute('id', 'superDropdown');
+
         // 6. Добавьте атрибут data - dd со значением 3 элементу у которого существует атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
+        // ----------------------Задание 6--------------------
+        const dataEl = document.querySelector('[aria-labelledby="dropdownMenuButton"]')
+        dataEl.dataset.dd = 3;
+        console.log(dataEl);
+
         // 7. Удалите атрибут type у элемента с классом "dropdown-toggle".
+        // ----------------------Задание 7--------------------
+        const toggleEl = document.querySelector('.dropdown-toggle');
+        console.log(toggleEl);
+        toggleEl.removeAttribute('type');
+
     </script>
 </body>
 
